@@ -12,7 +12,7 @@ public class QuizApplicationTest {
     @Test
     void testQuizCreation() {
         try {
-            Quiz quiz = new Quiz(1000);
+            Quiz quiz = new Quiz();
             quiz.addQuestions("Test1","1","test explanation","test");
             quiz.addQuestions("Test2","2","test explanation","test");
             quiz.addQuestions("Test3","3","test explanation","test");
@@ -35,7 +35,7 @@ public class QuizApplicationTest {
         answers.put(2,"2");
         answers.put(3,"3");
         try {
-            Quiz quiz=new Quiz(1000);
+            Quiz quiz=new Quiz();
             quiz.addQuestions("Test1","1","test explanation","test");
             quiz.addQuestions("Test2","2","test explanation","test");
             quiz.addQuestions("Test3","3","test explanation","test");
@@ -53,7 +53,7 @@ public class QuizApplicationTest {
         answers.put(2,"2");
         answers.put(3,"3");
         try {
-            Quiz quiz=new Quiz(1000);
+            Quiz quiz=new Quiz();
             quiz.addQuestions("Test1","1","test explanation","test");
             quiz.addQuestions("Test2","2","test explanation","test");
             quiz.addQuestions("Test3","3","test explanation","test");
@@ -71,7 +71,7 @@ public class QuizApplicationTest {
         answers.put(2,"3");
         answers.put(3,"3");
         try {
-            Quiz quiz = new Quiz(1000);
+            Quiz quiz = new Quiz();
             quiz.addQuestions("Test1", "1","test explanation","test");
             quiz.addQuestions("Test2", "2","test explanation","test");
             quiz.addQuestions("Test3", "3","test explanation","test");

@@ -76,7 +76,7 @@ public class Quiz {
 
         Thread timerThread = new Thread(() -> {
             try {
-                Thread.sleep(30000);
+                Thread.sleep(10000);
                 if (!answers.containsKey(i)) {
                     System.out.println("Time's up for question " + i + "! Moving to the next question.");
                     answerQuestion(i, "");
