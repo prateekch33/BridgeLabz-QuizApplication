@@ -205,6 +205,7 @@ public class Main {
 
                 }  else if(role==4) {
                     System.out.println("Thank You!!");
+                    System.exit(0);
                 }else {
                     System.out.println("Invalid role selection!!");
                 }
