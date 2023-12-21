@@ -12,10 +12,10 @@ public class QuizApplicationTest {
     @Test
     void testQuizCreation() {
         try {
-            Quiz quiz = new Quiz();
-            quiz.addQuestions("Test1","1");
-            quiz.addQuestions("Test2","2");
-            quiz.addQuestions("Test3","3");
+            Quiz quiz = new Quiz(1000);
+            quiz.addQuestions("Test1","1","test explanation","test");
+            quiz.addQuestions("Test2","2","test explanation","test");
+            quiz.addQuestions("Test3","3","test explanation","test");
             assertEquals(3,quiz.getQuestionCount());
         } catch(QuizException e) {
             e.printStackTrace();
@@ -35,10 +35,10 @@ public class QuizApplicationTest {
         answers.put(2,"2");
         answers.put(3,"3");
         try {
-            Quiz quiz=new Quiz();
-            quiz.addQuestions("Test1","1");
-            quiz.addQuestions("Test2","2");
-            quiz.addQuestions("Test3","3");
+            Quiz quiz=new Quiz(1000);
+            quiz.addQuestions("Test1","1","test explanation","test");
+            quiz.addQuestions("Test2","2","test explanation","test");
+            quiz.addQuestions("Test3","3","test explanation","test");
             quiz.addParticipants("Prateek Chandra","2001035");
             quiz.submitAnswers(answers,"2001035");
             assertEquals(3,quiz.showResult("2001035").size());
@@ -53,10 +53,10 @@ public class QuizApplicationTest {
         answers.put(2,"2");
         answers.put(3,"3");
         try {
-            Quiz quiz=new Quiz();
-            quiz.addQuestions("Test1","1");
-            quiz.addQuestions("Test2","2");
-            quiz.addQuestions("Test3","3");
+            Quiz quiz=new Quiz(1000);
+            quiz.addQuestions("Test1","1","test explanation","test");
+            quiz.addQuestions("Test2","2","test explanation","test");
+            quiz.addQuestions("Test3","3","test explanation","test");
             quiz.addParticipants("Prateek Chandra","2001035");
             quiz.submitAnswers(answers,"2001035");
             assertEquals(30,quiz.calculateScore(quiz.showResult("2001035").size()));
@@ -71,10 +71,10 @@ public class QuizApplicationTest {
         answers.put(2,"3");
         answers.put(3,"3");
         try {
-            Quiz quiz = new Quiz();
-            quiz.addQuestions("Test1", "1");
-            quiz.addQuestions("Test2", "2");
-            quiz.addQuestions("Test3", "3");
+            Quiz quiz = new Quiz(1000);
+            quiz.addQuestions("Test1", "1","test explanation","test");
+            quiz.addQuestions("Test2", "2","test explanation","test");
+            quiz.addQuestions("Test3", "3","test explanation","test");
 
             assertThrows(QuizException.class, () -> quiz.submitAnswers(answers, "2001025"));
         } catch(QuizException e) {
